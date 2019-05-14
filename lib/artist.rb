@@ -25,6 +25,3 @@ class Artist
     artist = @@all.detect{|artist| artist.name == name} || Artist.new(name)
     end
   end
-
-
-
