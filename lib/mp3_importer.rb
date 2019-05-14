@@ -11,10 +11,7 @@ class MP3Importer
   end
 
   def import
-    self.files.each do |file|
-      song = Song.new_by_filename(file)
-      Artist.all << song.artist unless Artist.all.include?(song.artist)
-    end
+    self.files
+    @file_array.each{|song| Song.new_by_filename(song)}
   end
-
 end
